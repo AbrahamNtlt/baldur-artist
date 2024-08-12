@@ -1,0 +1,45 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    /**
+     * Typecheck JS in `.svelte` and `.js` files by default.
+     * Disable checkJs if you'd like to use dynamic types in JS.
+     * Note that setting allowJs false does not prevent the use
+     * of JS in `.svelte` files.
+     */
+    "allowJs": true,
+    "checkJs": true,
+    "isolatedModules": true
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "exclude": ["node_modules", "lib", "es", "dist", "v2-doc", "scripts", "**/__tests__/**/*"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+//{
+//  "compilerOptions": {
+//    "baseUrl": "./",
+//    "paths": {
+//      "ant-design-vue": ["components/index.ts"],
+//      "ant-design-vue/es/*": ["components/*"]
+//    },
+//    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+//    "strictNullChecks": false,
+//    "moduleResolution": "node",
+//    "esModuleInterop": true,
+//    "experimentalDecorators": true,
+//    "jsx": "preserve",
+//    "noUnusedParameters": true,
+//    "noUnusedLocals": true,
+//    "noImplicitAny": false,
+//    "target": "esnext",
+//    "module": "esnext",
+//    "skipLibCheck": true,
+//    "allowJs": true,
+//    "importsNotUsedAsValues": "preserve"
+//  },
+//  "exclude": ["node_modules", "lib", "es", "dist", "v2-doc", "scripts", "**/__tests__/**/*"]
+//}
