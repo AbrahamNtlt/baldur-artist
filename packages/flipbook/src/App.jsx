@@ -1,7 +1,7 @@
 import {useState} from 'react'
-import {FiChevronLeft, FiChevronRight, FiPlusCircle, FiMinusCircle} from "react-icons/fi";
+import {FiChevronLeft, FiChevronRight} from "react-icons/fi";
 import './App.css'
-import Matrix from './Matrix'
+import Matrix from './matrix.js'
 
 function App() {
   const [page, setPage] = useState(1)
@@ -198,11 +198,9 @@ function App() {
       <FiChevronLeft className="btn left" onClick={() => {
         flipStart('left')
       }}/>
-      <FiPlusCircle className="btn plus"/>
       <span className="page-num">
         Page {page} of {pages.length - 1}
       </span>
-      <FiMinusCircle className="btn minus"/>
       <FiChevronRight className="btn right" onClick={() => {
         flipStart('right')
       }}/>
@@ -210,8 +208,6 @@ function App() {
     <div className="flip-book">
       <div className="viewport">
         <div className="flip-book-container">
-          <div className="click-to-flip left"></div>
-          <div className="click-to-flip right"></div>
           <div>
             <img src={pageUrl(leftPage)} alt="" className="page left fixed" style={{
               zIndex: 0
